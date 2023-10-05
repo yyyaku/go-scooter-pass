@@ -1,70 +1,170 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>go-scooter-pass</title>
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="fonts/text-regular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/text-medium.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/text-black.woff2" as="font" crossorigin="anonymous">
-    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
-    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Тестовое задание от Яндекс Крауд">
+  <title>go-scooter-pass</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/text-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/text-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/text-black.woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+</head>
+
+<body>
+  <div class="wrapper">
+    <main>
+      <h1 class="visually-hidden">Go scooter pass</h1>
+      <section class="hero" id="hero">
+        <div class="hero__image">
           <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+            <div class="hero__wrapper">
+              <div class="hero-header">
+                <a class="logo" href="index.html" aria-label="Логотип.">
+                  <svg width="176" height="50">
+                    <use href="img/sprite.svg#logo"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="hero-main">
+                <h2>Вступайте в&nbsp;клуб Самокатов</h2>
+                <p>Купите абонемент, чтобы стать частью клуба в&nbsp;новом сезоне&mdash;2024. 8&nbsp;месяцев
+                  за&nbsp;<span>499 ₽</span></p>
+                <a class="btn" aria-label="Стать частью клуба">Стать частью клуба</a>
+              </div>
+            </div>
           </div>
-        </section>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
+          <div class="hero__picture">
+            <source type="image/webp" srcset="./img/hero/scooter-mobile.webp 1x, ./img/hero/scooter-mobile@2x.webp 2x">
+            <img src="./img/hero/scooter-mobile.png" srcset="./img/hero/scooter-mobile@2x.png 2x" width="354"
+              height="308" alt="Самокат." loading="lazy">
+          </div>
         </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
+      </section>
+      <section class="advantages" id="advantages">
+        <div class="container">
+          <div class="advantages__wrapper">
+            <div class="advantages__header">
+              <h2>Вот что даёт участие в&nbsp;клубе</h2>
+            </div>
+            <div class="advantages__info">
+              <ul class="advantages__list">
+                <li class="advantages__item">
+                  <div class="advantages__icon advantages__icon--ruble">
+                    <svg width="55" height="37">
+                      <use href="img/sprite.svg#advantages-ruble"></use>
+                    </svg>
+                  </div>
+                  <div class="advantages__info">
+                    <p>0 ₽&nbsp;за&nbsp;старт в&nbsp;каждой поездке</p>
+                  </div>
+                </li>
+                <li class="advantages__item">
+                  <div class="advantages__icon advantages__icon--scooter">
+                    <svg width="62" height="52">
+                      <use href="img/sprite.svg#advantages-scooter"></use>
+                    </svg>
+                  </div>
+                  <div class="advantages__info">
+                    <p>Катаетесь с&nbsp;друзьями? Бронируйте до&nbsp;трёх самокатов с&nbsp;аккаунта
+                      с&nbsp;абонементом&nbsp;&mdash; так&nbsp;у&nbsp;всех будет бесплатный старт</p>
+                  </div>
+                </li>
+                <li class="advantages__item">
+                  <div class="advantages__icon advantages__icon--watch">
+                    <svg width="55" height="54">
+                      <use href="img/sprite.svg#advantages-watch"></use>
+                    </svg>
+                  </div>
+                  <div class="advantages__info">
+                    <p>Бесплатная пауза 15&nbsp;минут в&nbsp;поездке&nbsp;&mdash; например, чтобы зайти за&nbsp;кофе или
+                      передохнуть</p>
+                  </div>
+                </li>
+                <li class="advantages__item">
+                  <div class="advantages__icon advantages__icon--charger">
+                    <svg width="53" height="32">
+                      <use href="img/sprite.svg#advantages-charger"></use>
+                    </svg>
+                  </div>
+                  <div class="advantages__info">
+                    <p>Если самокат недостаточно заряжен или с&nbsp;ним неудобно переходить дорогу, замените
+                      по&nbsp;пути
+                      на&nbsp;другой&nbsp;&mdash; это бесплатно</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+      <section class="exclusive" id="exclusive">
+        <div class="container">
+          <div class="exclusive__wrapper">
+            <div class="exclusive__header">
+              <h2>Эксклюзивный доступ к&nbsp;событиям Самокатов</h2>
+              <p>С&nbsp;абонементом&nbsp;&mdash; у&nbsp;вас доступ к&nbsp;специальным мероприятиям, скидки
+                и&nbsp;классный мерч. В&nbsp;2023 году мы&nbsp;танцевали на&nbsp;Даче Плюс с&nbsp;Антохой&nbsp;MC,
+                катались на&nbsp;самокатах с&nbsp;Сергеем Мезенцевым и&nbsp;слушали хор Attaque de&nbsp;Panique</p>
+            </div>
+            <div class="exclusive__swiper swiper">
+              <ul class="exclusive__list swiper-wrapper">
+                <li class="exclusive__item exclusive__item--man swiper-slide">
+                  <picture>
+                    <source type="image/webp" srcset="./img/exclusive/man.webp 1x, ./img/exclusive/man@2x.webp 2x">
+                    <img src="./img/exclusive/man.png" srcset="./img/exclusive/man@2x.png 2x" width="344" height="344"
+                      alt="Мужчина в очках." loading="lazy">
+                  </picture>
+                </li>
+                <li class="exclusive__item exclusive__item--party swiper-slide">
+                  <picture>
+                    <source type="image/webp" srcset="./img/exclusive/party.webp 1x, ./img/exclusive/party@2x.webp 2x">
+                    <img src="./img/exclusive/party.png" srcset="./img/exclusive/party@2x.png 2x" width="344"
+                      height="344" alt="Вечеринка." loading="lazy">
+                  </picture>
+                </li>
+                <li class="exclusive__item exclusive__item--woman swiper-slide">
+                  <picture>
+                    <source type="image/webp" srcset="./img/exclusive/woman.webp 1x, ./img/exclusive/woman@2x.webp 2x">
+                    <img src="./img/exclusive/woman.png" srcset="./img/exclusive/woman@2x.png 2x" width="344"
+                      height="344" alt="Девушка в панаме." loading="lazy">
+                  </picture>
+                </li>
+                <li class="exclusive__item exclusive__item--bag swiper-slide">
+                  <picture>
+                    <source type="image/webp" srcset="./img/exclusive/bag.webp 1x, ./img/exclusive/bag@2x.webp 2x">
+                    <img src="./img/exclusive/bag.png" srcset="./img/exclusive/bag@2x.png 2x" width="344" height="344"
+                      alt="Шопер." loading="lazy">
+                  </picture>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-buttons exclusive__buttons">
+              <button class="swiper-buttons__button exclusive__button exclusive__button--prev" type="button"
+                aria-label="Назад.">
+                <span class="swiper-buttons__arrow swiper-buttons__arrow--prev"></span>
+              </button>
+              <button class="swiper-buttons__button exclusive__button exclusive__button--next" type="button"
+                aria-label="Вперед.">
+                <span class="swiper-buttons__arrow swiper-buttons__arrow--next"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container"></div>
+    </footer>
+  </div>
 
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>

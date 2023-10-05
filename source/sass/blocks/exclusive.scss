@@ -1,0 +1,165 @@
+.exclusive__wrapper {
+  padding: 124px 0 0 2px;
+}
+
+.exclusive__header {
+  width: 70%;
+
+  @include vp-1199 {
+    width: 80%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.exclusive__header h2 {
+  margin: 0 0 35px;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: -0.96px;
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.64px;
+  }
+}
+
+.exclusive__header p {
+  margin: 0;
+  width: 68%;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+
+  @include vp-1199 {
+    width: 60%;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    width: 100%;
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+}
+
+.exclusive__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 1125px;
+  list-style-type: none;
+
+  @include vp-1199 {
+    margin: 0 auto;
+    width: 640px;
+    height: 800px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.exclusive__item {
+  width: 456px;
+  height: 456px;
+  background-color: $color-yellow;
+  border-radius: 64px;
+  transform: rotate(2deg);
+
+  @include vp-1199 {
+    width: 300px;
+    height: 300px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 344/344;
+    border-radius: 48px;
+    transform: rotate(0deg);
+  }
+
+  &--man {
+    position: absolute;
+    bottom: 597px;
+    left: -5px;
+
+    @include vp-1199 {
+      bottom: 434px;
+      left: 10px;
+    }
+
+    @include vp-767 {
+      position: static;
+    }
+  }
+
+  &--party {
+    position: absolute;
+    bottom: 808px;
+    right: -20px;
+
+    @include vp-1199 {
+      bottom: 645px;
+      right: 0;
+    }
+
+    @include vp-767 {
+      position: static;
+    }
+  }
+
+  &--woman {
+    position: absolute;
+    bottom: 330px;
+    right: -3px;
+
+    @include vp-1199 {
+      right: 17px;
+    }
+
+    @include vp-767 {
+      position: static;
+    }
+  }
+
+  &--bag {
+    position: absolute;
+    bottom: 119px;
+    left: -22px;
+
+    @include vp-1199 {
+      left: 0;
+    }
+
+    @include vp-767 {
+      position: static;
+    }
+  }
+}
+
+.exclusive__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 64px;
+
+  @include vp-767 {
+    border-radius: 48px;
+  }
+}
+
+.exclusive__buttons {
+  display: none;
+
+  @include vp-767 {
+    display: flex;
+  }
+}

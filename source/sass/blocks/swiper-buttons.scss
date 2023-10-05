@@ -1,0 +1,111 @@
+.swiper-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.swiper-buttons__button {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    background-color: $color-yellow;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  // @include hover-focus-visible {
+  //   &::after {
+  //     background-color: $color-default-white;
+  //   }
+  // }
+
+  // @include focus;
+
+  // @include active {
+  //   &::after {
+  //     background-color: $color-default-white;
+  //   }
+
+  //   .swiper-buttons__arrow {
+  //     border-top: 1px solid $color-default-blue-opacity70;
+  //     border-right: 1px solid $color-default-blue-opacity70;
+
+  //     &::before {
+  //       background-color: $color-default-blue-opacity70;
+  //     }
+  //   }
+  // }
+
+  // @include disabled {
+  //   cursor: not-allowed;
+
+  //   &::after {
+  //     background-color: transparent;
+  //   }
+
+  //   .swiper-buttons__arrow {
+  //     border-top: 1px solid $color-grey;
+  //     border-right: 1px solid $color-grey;
+  //     cursor: not-allowed;
+
+  //     &::before {
+  //       background-color: $color-grey;
+  //     }
+  //   }
+  // }
+}
+
+.swiper-buttons__arrow {
+  position: absolute;
+  top: 24px;
+  display: inline-flex;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  border-top: 1px solid $color-default-profect;
+  border-right: 1px solid $color-default-profect;
+  z-index: 3;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 22.5px;
+    height: 3px;
+    background-color: $color-default-profect;
+    z-index: 2;
+    transform: rotate(135deg);
+  }
+
+  &--prev {
+    left: 25px;
+    transform: rotate(-135deg);
+
+    &::before {
+      top: 3px;
+      left: -1px;
+    }
+  }
+
+  &--next {
+    right: 7px;
+    transform: rotate(45deg);
+
+    &::before {
+      top: 3px;
+      right: -1px;
+    }
+  }
+}

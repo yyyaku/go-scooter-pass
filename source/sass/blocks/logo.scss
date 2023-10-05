@@ -1,0 +1,8 @@
+.logo svg {
+  fill: $color-default-profect;
+
+  @include vp-767 {
+    width: 112px;
+    height: 32px;
+  }
+}

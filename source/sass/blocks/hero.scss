@@ -1,0 +1,101 @@
+.hero {
+  position: relative;
+  background: $white-to-bottom-gradient;
+
+  &::before {
+    content: "";
+    opacity: 0.22;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: $hero-bg;
+  }
+}
+
+.hero__image {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 45px;
+    right: 90px;
+    width: 768px;
+    height: 716px;
+    background-image: url("../img/hero/scooter.png");
+    background-size: 768px 716px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 395px;
+    right: 460px;
+    width: 207px;
+    height: 207px;
+    background-image: url("../img/hero/scooter-text.png");
+    background-size: 207px 207px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @include vp-1199 {
+    &::before {
+      top: 165px;
+      right: 130px;
+      width: 354px;
+      height: 309px;
+      background-image: url("../img/hero/scooter-tablet.png");
+      background-size: 354px 309px;
+    }
+
+    &::after {
+      top: 319px;
+      right: 299px;
+      width: 86px;
+      height: 86px;
+      background-image: url("../img/hero/scooter-text-tablet.png");
+      background-size: 86px 86px;
+    }
+
+    @include vp-767 {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.hero__wrapper {
+  padding: 125px 0 117px 2px;
+
+  @include vp-767 {
+    padding: 32px 0 0;
+  }
+}
+
+.hero__picture {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+    margin: -5px 17px 0 5px;
+  }
+}
+
+.hero__picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
