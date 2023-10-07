@@ -1,0 +1,61 @@
+.hero-main {
+  position: relative;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 3;
+
+  @include vp-767 {
+    max-width: 100%;
+  }
+}
+
+.hero-main h2 {
+  margin: 0 0 28px;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 100%;
+  letter-spacing: -1.44px;
+
+  @include vp-767 {
+    margin: 0 0 24px;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -0.72px;
+  }
+}
+
+.hero-main p {
+  margin: 0 0 35px;
+  line-height: 31.2px;
+
+  @include vp-767 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+}
+
+.hero-main span {
+  position: relative;
+  padding: 8px 12px;
+  color: $color-brown-olive;
+  background-color: $lilac-and-periwinkle;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 21.6px;
+  }
+}
+
+.hero-main a {
+  @include vp-767 {
+    position: fixed;
+    width: calc(100% - 64px);
+    bottom: 0;
+  }
+}
