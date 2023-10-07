@@ -27,7 +27,7 @@
 }
 
 .hero-main p {
-  margin: 0 0 35px;
+  margin: 0 0 36px;
   line-height: 31.2px;
 
   @include vp-767 {
@@ -37,11 +37,17 @@
   }
 }
 
-.hero-main span {
-  position: relative;
-  padding: 8px 12px;
+.hero-main__price {
+  padding: 2px 12px 2px 0;
+  border-radius: 500px;
+  background: $white-and-periwinkle;
+}
+
+.hero-main__now-price {
+  padding: 2px 12px;
   color: $color-brown-olive;
-  background-color: $lilac-and-periwinkle;
+  background: $lilac-and-periwinkle;
+  border-radius: 500px;
   font-size: 24px;
   font-weight: 500;
   line-height: 28.8px;
@@ -52,10 +58,26 @@
   }
 }
 
+.hero-main__old-price {
+  color: $color-gray;
+  margin: 0 0 2px;
+  text-decoration: line-through;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+
+  @include vp-767 {
+    font-size: 13px;
+    line-height: 15.6px;
+  }
+}
+
 .hero-main a {
   @include vp-767 {
     position: fixed;
     width: calc(100% - 64px);
-    bottom: 0;
+    bottom: 24px;
+    box-shadow: none;
+    z-index: 6;
   }
 }

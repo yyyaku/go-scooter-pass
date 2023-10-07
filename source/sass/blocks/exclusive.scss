@@ -1,5 +1,24 @@
 .exclusive__wrapper {
+  position: relative;
   padding: 124px 0 0 2px;
+
+  @include vp-767 {
+    padding: 67px 0 68px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 315px;
+      right: 0;
+      width: 153px;
+      height: 184px;
+      background-image: url("../img/exclusive/bg/lines-mobile.png");
+      background-size: 153px 184px;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 3;
+    }
+  }
 }
 
 .exclusive__header {
@@ -11,6 +30,7 @@
 
   @include vp-767 {
     width: 100%;
+    margin: 0 0 42px;
   }
 }
 
@@ -22,6 +42,7 @@
   letter-spacing: -0.96px;
 
   @include vp-767 {
+    margin: 0 0 22px;
     font-size: 32px;
     line-height: 32px;
     letter-spacing: -0.64px;
@@ -47,11 +68,22 @@
   }
 }
 
+.exclusive__swiper {
+  max-width: 1048px;
+  margin: 0 auto;
+  padding: 0 64px;
+
+  @include vp-767 {
+    margin: 0 0 24px;
+    padding: 0 15px;
+  }
+}
+
 .exclusive__list {
   position: relative;
   margin: 0;
   padding: 0;
-  height: 1125px;
+  height: 1112px;
   list-style-type: none;
 
   @include vp-1199 {
@@ -88,8 +120,25 @@
 
   &--man {
     position: absolute;
-    bottom: 597px;
+    bottom: 585px;
     left: -5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -133px;
+      left: -261px;
+      width: 525px;
+      height: 593px;
+      background-image: url("../img/exclusive/bg/map.png");
+      background-size: 525px 593px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include vp-1199 {
+        display: none;
+      }
+    }
 
     @include vp-1199 {
       bottom: 434px;
@@ -103,8 +152,25 @@
 
   &--party {
     position: absolute;
-    bottom: 808px;
+    bottom: 795px;
     right: -20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -165px;
+      right: -150px;
+      width: 365px;
+      height: 366px;
+      background-image: url("../img/exclusive/bg/lines.png");
+      background-size: 365px 366px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include vp-1199 {
+        display: none;
+      }
+    }
 
     @include vp-1199 {
       bottom: 645px;
@@ -118,8 +184,25 @@
 
   &--woman {
     position: absolute;
-    bottom: 330px;
+    bottom: 315px;
     right: -3px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -366px;
+      right: -255px;
+      width: 598px;
+      height: 696px;
+      background-image: url("../img/exclusive/bg/cup.png");
+      background-size: 598px 696px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include vp-1199 {
+        display: none;
+      }
+    }
 
     @include vp-1199 {
       right: 17px;
@@ -132,7 +215,7 @@
 
   &--bag {
     position: absolute;
-    bottom: 119px;
+    bottom: 110px;
     left: -22px;
 
     @include vp-1199 {

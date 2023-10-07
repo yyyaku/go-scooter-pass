@@ -1,0 +1,213 @@
+.membership {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.membership__list {
+  display: flex;
+  flex-direction: column;
+  gap: 117px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-767 {
+    gap: 24px;
+  }
+}
+
+.membership__image {
+  @include vp-767 {
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.membership__image img {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.membership__item--first {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+
+  & .membership__image {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -235px;
+      right: 0;
+      width: 872px;
+      height: 893px;
+      background-image: url("../img/membership/scooter-plus.png");
+      background-size: 872px 893px;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 55px;
+      right: 411px;
+      width: 296px;
+      height: 293px;
+      background-image: url("../img/membership/plus.png");
+      background-size: 296px 293px;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    @include vp-1199 {
+      &::before {
+        top: 0;
+        right: 20px;
+        width: 430px;
+        height: 440px;
+        background-image: url("../img/membership/scooter-plus-tablet.png");
+        background-size: 430px 430px;
+      }
+
+      &::after {
+        right: 220px;
+      }
+    }
+  }
+}
+
+.membership__item--second {
+  display: grid;
+  grid-template-columns: 1fr 45%;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr 60%;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  & .membership__info {
+    margin: 0 30px 0 -30px;
+
+    @include vp-1199 {
+      margin: 0;
+    }
+  }
+
+  & .membership__image {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100px;
+      left: 265px;
+      width: 284px;
+      height: 393px;
+      background-image: url("../img/membership/scooter.png");
+      background-size: 284px 393px;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 84px;
+      left: 207px;
+      width: 410px;
+      height: 410px;
+      background-image: url("../img/membership/scooter-text.png");
+      background-size: 410px 410px;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    @include vp-1199 {
+
+      &::before {
+        bottom: 135px;
+        left: 75px;
+        width: 189px;
+        height: 264px;
+        background-image: url("../img/membership/scooter-tablet.png");
+        background-size: 189px 264px;
+      }
+
+      &::after {
+        bottom: 120px;
+        left: 25px;
+        width: 280px;
+        height: 280px;
+        background-image: url("../img/membership/scooter-text-tablet.png");
+        background-size: 280px 280px;
+      }
+    }
+  }
+}
+
+.membership__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+
+  @include vp-767 {
+    gap: 22px;
+  }
+}
+
+.membership__info h3 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: -0.96px;
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.64px;
+  }
+}
+
+.membership__info p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+}
+
+.membership__info a {
+  margin: 7px 0 0;
+
+  @include vp-767 {
+    margin: 5px 0 0;
+  }
+}

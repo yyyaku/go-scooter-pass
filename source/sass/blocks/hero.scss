@@ -13,6 +13,24 @@
     right: 0;
     background: $hero-bg;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 120px;
+    width: 657px;
+    height: 401px;
+    background-image: url("../img/hero/elipse.png");
+    background-size: 657px 401px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+
+    @include vp-1199 {
+      display: none;
+    }
+  }
 }
 
 .hero__image {
@@ -78,7 +96,7 @@
 }
 
 .hero__wrapper {
-  padding: 125px 0 117px 2px;
+  padding: 125px 0 120px 2px;
 
   @include vp-767 {
     padding: 32px 0 0;
@@ -90,7 +108,7 @@
 
   @include vp-767 {
     display: block;
-    margin: -5px 17px 0 5px;
+    margin: -5px 17px 39px 5px;
   }
 }
 

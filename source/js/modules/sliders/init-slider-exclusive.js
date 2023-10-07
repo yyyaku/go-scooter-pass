@@ -28,20 +28,4 @@ const initSliderExclusive = () => {
   }
 };
 
-// const initSliderExclusive = () => {
-//   if (sliderExclusive) {
-//     // eslint-disable-next-line
-//     new Swiper(sliderExclusive, {
-
-//       navigation: {
-//         nextEl: buttonNext,
-//         prevEl: buttonPrev,
-//       },
-
-//       slidesPerView: 1,
-//       spaceBetween: 30,
-//     });
-//   }
-// };
-
 export {initSliderExclusive};
