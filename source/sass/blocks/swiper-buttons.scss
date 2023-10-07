@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0 10px;
+  gap: 0 12px;
 }
 
 .swiper-buttons__button {
@@ -26,63 +26,37 @@
     z-index: 1;
   }
 
-  // @include hover-focus-visible {
-  //   &::after {
-  //     background-color: $color-default-white;
-  //   }
-  // }
+  @include hover-focus-visible {
+    opacity: 0.8;
+  }
 
-  // @include focus;
+  @include focus;
 
-  // @include active {
-  //   &::after {
-  //     background-color: $color-default-white;
-  //   }
+  @include active {
+    opacity: 0.8;
+  }
 
-  //   .swiper-buttons__arrow {
-  //     border-top: 1px solid $color-default-blue-opacity70;
-  //     border-right: 1px solid $color-default-blue-opacity70;
-
-  //     &::before {
-  //       background-color: $color-default-blue-opacity70;
-  //     }
-  //   }
-  // }
-
-  // @include disabled {
-  //   cursor: not-allowed;
-
-  //   &::after {
-  //     background-color: transparent;
-  //   }
-
-  //   .swiper-buttons__arrow {
-  //     border-top: 1px solid $color-grey;
-  //     border-right: 1px solid $color-grey;
-  //     cursor: not-allowed;
-
-  //     &::before {
-  //       background-color: $color-grey;
-  //     }
-  //   }
-  // }
+  @include disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 }
 
 .swiper-buttons__arrow {
   position: absolute;
-  top: 24px;
+  top: 16px;
   display: inline-flex;
-  width: 8px;
-  height: 8px;
+  width: 15px;
+  height: 15px;
   cursor: pointer;
-  border-top: 1px solid $color-default-profect;
-  border-right: 1px solid $color-default-profect;
-  z-index: 3;
+  border-top: 3px solid $color-default-profect;
+  border-right: 3px solid $color-default-profect;
+  z-index: 2;
 
   &::before {
     position: absolute;
     content: "";
-    width: 22.5px;
+    width: 25px;
     height: 3px;
     background-color: $color-default-profect;
     z-index: 2;
@@ -90,22 +64,22 @@
   }
 
   &--prev {
-    left: 25px;
+    left: 13px;
     transform: rotate(-135deg);
 
     &::before {
-      top: 3px;
-      left: -1px;
+      top: 7px;
+      left: -7px;
     }
   }
 
   &--next {
-    right: 7px;
+    right: 13px;
     transform: rotate(45deg);
 
     &::before {
-      top: 3px;
-      right: -1px;
+      top: 6px;
+      right: -4px;
     }
   }
 }

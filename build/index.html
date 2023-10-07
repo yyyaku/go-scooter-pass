@@ -34,15 +34,21 @@
               <div class="hero-main">
                 <h2>Вступайте в&nbsp;клуб Самокатов</h2>
                 <p>Купите абонемент, чтобы стать частью клуба в&nbsp;новом сезоне&mdash;2024. 8&nbsp;месяцев
-                  за&nbsp;<span>499 ₽</span></p>
+                  за
+                  <span class="hero-main__price"><span class="hero-main__now-price">499 ₽</span>
+                    <span class="hero-main__old-price">3190 ₽</span></span>
+                </p>
                 <a class="btn" aria-label="Стать частью клуба">Стать частью клуба</a>
               </div>
             </div>
           </div>
           <div class="hero__picture">
-            <source type="image/webp" srcset="./img/hero/scooter-mobile.webp 1x, ./img/hero/scooter-mobile@2x.webp 2x">
-            <img src="./img/hero/scooter-mobile.png" srcset="./img/hero/scooter-mobile@2x.png 2x" width="354"
-              height="308" alt="Самокат." loading="lazy">
+            <picture>
+              <source type="image/webp"
+                srcset="./img/hero/scooter-mobile.webp 1x, ./img/hero/scooter-mobile@2x.webp 2x">
+              <img src="./img/hero/scooter-mobile.png" srcset="./img/hero/scooter-mobile@2x.png 2x" width="354"
+                height="308" alt="Самокат." loading="lazy">
+            </picture>
           </div>
         </div>
       </section>
@@ -82,8 +88,8 @@
                     </svg>
                   </div>
                   <div class="advantages__info">
-                    <p>Бесплатная пауза 15&nbsp;минут в&nbsp;поездке&nbsp;&mdash; например, чтобы зайти за&nbsp;кофе или
-                      передохнуть</p>
+                    <p>Бесплатная пауза 15&nbsp;минут в&nbsp;поездке&nbsp;&mdash; например, чтобы зайти за&nbsp;кофе
+                      или&nbsp;передохнуть</p>
                   </div>
                 </li>
                 <li class="advantages__item">
@@ -104,62 +110,118 @@
         </div>
       </section>
       <section class="exclusive" id="exclusive">
-        <div class="container">
-          <div class="exclusive__wrapper">
+        <div class="exclusive__wrapper">
+          <div class="container">
             <div class="exclusive__header">
               <h2>Эксклюзивный доступ к&nbsp;событиям Самокатов</h2>
               <p>С&nbsp;абонементом&nbsp;&mdash; у&nbsp;вас доступ к&nbsp;специальным мероприятиям, скидки
                 и&nbsp;классный мерч. В&nbsp;2023 году мы&nbsp;танцевали на&nbsp;Даче Плюс с&nbsp;Антохой&nbsp;MC,
                 катались на&nbsp;самокатах с&nbsp;Сергеем Мезенцевым и&nbsp;слушали хор Attaque de&nbsp;Panique</p>
             </div>
-            <div class="exclusive__swiper swiper">
-              <ul class="exclusive__list swiper-wrapper">
-                <li class="exclusive__item exclusive__item--man swiper-slide">
+          </div>
+          <div class="exclusive__swiper swiper">
+            <ul class="exclusive__list swiper-wrapper">
+              <li class="exclusive__item exclusive__item--man swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="./img/exclusive/man.webp 1x, ./img/exclusive/man@2x.webp 2x">
+                  <img src="./img/exclusive/man.png" srcset="./img/exclusive/man@2x.png 2x" width="344" height="344"
+                    alt="Мужчина в очках." loading="lazy">
+                </picture>
+              </li>
+              <li class="exclusive__item exclusive__item--party swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="./img/exclusive/party.webp 1x, ./img/exclusive/party@2x.webp 2x">
+                  <img src="./img/exclusive/party.png" srcset="./img/exclusive/party@2x.png 2x" width="344" height="344"
+                    alt="Вечеринка." loading="lazy">
+                </picture>
+              </li>
+              <li class="exclusive__item exclusive__item--woman swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="./img/exclusive/woman.webp 1x, ./img/exclusive/woman@2x.webp 2x">
+                  <img src="./img/exclusive/woman.png" srcset="./img/exclusive/woman@2x.png 2x" width="344" height="344"
+                    alt="Девушка в панаме." loading="lazy">
+                </picture>
+              </li>
+              <li class="exclusive__item exclusive__item--bag swiper-slide">
+                <picture>
+                  <source type="image/webp" srcset="./img/exclusive/bag.webp 1x, ./img/exclusive/bag@2x.webp 2x">
+                  <img src="./img/exclusive/bag.png" srcset="./img/exclusive/bag@2x.png 2x" width="344" height="344"
+                    alt="Шопер." loading="lazy">
+                </picture>
+              </li>
+            </ul>
+          </div>
+          <div class="swiper-buttons exclusive__buttons">
+            <button class="swiper-buttons__button exclusive__button exclusive__button--prev" type="button"
+              aria-label="Назад.">
+              <span class="swiper-buttons__arrow swiper-buttons__arrow--prev"></span>
+            </button>
+            <button class="swiper-buttons__button exclusive__button exclusive__button--next" type="button"
+              aria-label="Вперед.">
+              <span class="swiper-buttons__arrow swiper-buttons__arrow--next"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="membership" id="membership">
+        <div class="container">
+          <div class="membership__wrapper">
+            <ul class="membership__list">
+              <li class="membership__item membership__item--first">
+                <div class="membership__info">
+                  <h3>Купить абонемент и&nbsp;вступить в&nbsp;клуб&nbsp;смогут те, кто в&nbsp;Плюсе</h3>
+                  <p>За&nbsp;каждую поездку на&nbsp;самокатах такие пользователи получают кешбэк баллами. Баллы можно
+                    тратить на&nbsp;поездки на&nbsp;самокатах и&nbsp;такси с&nbsp;Яндекс&nbsp;Go, покупки и&nbsp;заказы
+                    в&nbsp;других сервисах Яндекса</p>
+                </div>
+                <div class="membership__image">
+                  <!-- Контейнер для изображения СКУТЕРА на планшете и десктоп  -->
+                </div>
+              </li>
+              <li class="membership__item membership__item--second">
+                <div class="membership__image">
                   <picture>
-                    <source type="image/webp" srcset="./img/exclusive/man.webp 1x, ./img/exclusive/man@2x.webp 2x">
-                    <img src="./img/exclusive/man.png" srcset="./img/exclusive/man@2x.png 2x" width="344" height="344"
-                      alt="Мужчина в очках." loading="lazy">
+                    <source type="image/webp"
+                      srcset="./img/membership/scooter-mobile.webp 1x, ./img/membership/scooter-mobile@2x.webp 2x">
+                    <img src="./img/membership/scooter-mobile.png" srcset="./img/membership/scooter-mobile@2x.png 2x"
+                      width="189" height="264" alt="Самокат." loading="lazy">
                   </picture>
-                </li>
-                <li class="exclusive__item exclusive__item--party swiper-slide">
-                  <picture>
-                    <source type="image/webp" srcset="./img/exclusive/party.webp 1x, ./img/exclusive/party@2x.webp 2x">
-                    <img src="./img/exclusive/party.png" srcset="./img/exclusive/party@2x.png 2x" width="344"
-                      height="344" alt="Вечеринка." loading="lazy">
-                  </picture>
-                </li>
-                <li class="exclusive__item exclusive__item--woman swiper-slide">
-                  <picture>
-                    <source type="image/webp" srcset="./img/exclusive/woman.webp 1x, ./img/exclusive/woman@2x.webp 2x">
-                    <img src="./img/exclusive/woman.png" srcset="./img/exclusive/woman@2x.png 2x" width="344"
-                      height="344" alt="Девушка в панаме." loading="lazy">
-                  </picture>
-                </li>
-                <li class="exclusive__item exclusive__item--bag swiper-slide">
-                  <picture>
-                    <source type="image/webp" srcset="./img/exclusive/bag.webp 1x, ./img/exclusive/bag@2x.webp 2x">
-                    <img src="./img/exclusive/bag.png" srcset="./img/exclusive/bag@2x.png 2x" width="344" height="344"
-                      alt="Шопер." loading="lazy">
-                  </picture>
-                </li>
-              </ul>
-            </div>
-            <div class="swiper-buttons exclusive__buttons">
-              <button class="swiper-buttons__button exclusive__button exclusive__button--prev" type="button"
-                aria-label="Назад.">
-                <span class="swiper-buttons__arrow swiper-buttons__arrow--prev"></span>
-              </button>
-              <button class="swiper-buttons__button exclusive__button exclusive__button--next" type="button"
-                aria-label="Вперед.">
-                <span class="swiper-buttons__arrow swiper-buttons__arrow--next"></span>
-              </button>
-            </div>
+                </div>
+                <div class="membership__info">
+                  <h3>80  %&nbsp;наших пользователей уже в&nbsp;клубе и&nbsp;экономят на&nbsp;поездках</h3>
+                  <p>Присоединяйтесь&nbsp;&mdash; опция начнёт действовать в&nbsp;начале сезона&mdash;2024.
+                    Об&nbsp;открытии сезона предупредим заранее, чтобы вы&nbsp;были готовы</p>
+                  <a href="#" class="btn">Хочу абонемент</a>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
     </main>
     <footer>
-      <div class="container"></div>
+      <div class="container">
+        <div class="footer">
+          <p>Доп. опция &laquo;Абонемент на&nbsp;самокаты&raquo; на&nbsp;8&nbsp;месяцев (240&nbsp;дней) активируется
+            автоматически с&nbsp;момента старта сезона 2024&nbsp;г. самокатов Яндекс&nbsp;Go, далее предусмотрено
+            автопродление доп.опции за&nbsp;399 руб./мес. Сертификат на&nbsp;доп.опцию &laquo;Абонемент
+            на&nbsp;самокаты&raquo; на&nbsp;8&nbsp;месяцев оформляется на&nbsp;условиях документа
+            <a class="footer__link"
+              href="https://go.yandex/ru_ru/lp/rides/scooter">yandex.ru/legal/scooters_seasonpass</a>. Доп.опция
+            доступна пользователям с&nbsp;активной подпиской (условия
+            подписки: <a class="footer__link"
+              href="https://go.yandex/ru_ru/lp/rides/scooter">yandex.ru/legal/yandex_plus_conditions</a>), есть
+            ограничения, подробнее:
+            <a class="footer__link"
+              href="https://go.yandex/ru_ru/lp/rides/scooter">yandex.ru/legal/yandex_plus_opzii_list</a>. В&nbsp;случае
+            отсутствия у&nbsp;пользователя активной подписки
+            на&nbsp;дату активации доп.опции, пользователю предоставляется 7&nbsp;дней подписки Яндекс Плюс бесплатно,
+            далее автопродление&nbsp;&mdash; 299 руб./мес. Электросамокаты Яндекс Go&nbsp;&mdash; сервис аренды
+            электросамокатов на&nbsp;условиях: <a class="footer__link"
+              href="https://go.yandex/ru_ru/lp/rides/scooter">clck.ru/gwDGn</a>.&nbsp;0+
+          </p>
+        </div>
+      </div>
     </footer>
   </div>
 

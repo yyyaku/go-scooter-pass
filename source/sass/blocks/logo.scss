@@ -5,4 +5,19 @@
     width: 112px;
     height: 32px;
   }
+
+  @include hover-focus-visible {
+    opacity: 0.8;
+  }
+
+  @include focus;
+
+  @include active {
+    fill: $color-default-black;
+  }
+
+  @include disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 }
