@@ -20,7 +20,8 @@
   }
 
   @include hover-focus-visible {
-    opacity: 0.8;
+    color: $color-default-black;
+    background-color: $color-limon;
   }
 
   @include focus;
